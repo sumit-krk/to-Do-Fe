@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "./Login.css";
-import { loginUser } from "../../feature/login/loginSlice";
+import { loginUser, resetLoginState } from "../../feature/login/loginSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { getProfile } from "../../feature/getProfile/getProfileSlice";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
     const dispatch = useDispatch();
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("kush@gmail.com");
+    const [password, setPassword] = useState("Kush@123");
     const loginUserState = useSelector((state)=> state.loginUserState)
+    const navigate = useNavigate();
     console.log(loginUserState,"loginUserState");
 
     const handleSubmit = (e) => {
@@ -23,7 +26,9 @@ const Login = () => {
 
     useEffect(()=>{
       if(loginUserState.signupSuccess) {
-        window.location.href = "http://localhost:5173/Todo";
+        localStorage.setItem("token", loginUserState.token);
+        navigate("/todo");
+        dispatch(resetLoginState());
       }
  
     },[loginUserState]);
