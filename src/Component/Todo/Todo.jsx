@@ -10,6 +10,19 @@ const Todo = () => {
     console.log(e.target.value, "value:-");
   }
 
+import React, { useEffect } from 'react'
+import { useDispatch } from 'react-redux';
+import { getProfile } from '../../feature/getProfile/getProfileSlice';
+
+const Todo = () => {
+  const dispatch = useDispatch();
+  const token = localStorage.getItem("token");
+  console.log("Todo component token:", token);
+  useEffect(()=>{
+      if(token){
+          dispatch(getProfile())
+      }
+  },[token])
   return (
     <div style={{textAlign:"center", marginTop:"20px" }}>
       <h2>To do App</h2>

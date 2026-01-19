@@ -21,13 +21,16 @@ const loginSlice = createSlice({
     user: null,
     loading: false,
     error: null,
+    token: null,
     signupSuccess: false,
   },
   reducers: {
     resetLoginState: (state) => {
       state.loading = false;
       state.error = null;
+      state.token = null,
       state.signupSuccess = false;
+      state.user = null;
     },
   },
   extraReducers: (builder) => {
@@ -40,6 +43,7 @@ const loginSlice = createSlice({
       .addCase(loginUser.fulfilled, (state, action) => {
         state.loading = false;
         state.signupSuccess = true;
+        state.token = action.payload?.token || null;
         state.user = action.payload?.user || null;
       })
       .addCase(loginUser.rejected, (state, action) => {
