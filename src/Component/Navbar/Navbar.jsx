@@ -34,7 +34,7 @@ const Navbar = () => {
       }}
     >
       <div>
-        <Link to="/todo" style={{ textDecoration: "none", color: "white" }}>
+        <Link to="/todo" style={{ textDecoration: "none", color: "white",cursor:"pointer" }}>
           To-Do
         </Link>
       </div>
@@ -57,7 +57,8 @@ const Navbar = () => {
               textAlign: "center",
               borderRadius: "8px",
               margin: "8px",
-              border: "none"
+              border: "none",
+              cursor:"pointer"
             }}
           >
             <Link to="/login" style={{ textDecoration: "none", color: "white" }}>
@@ -70,7 +71,8 @@ const Navbar = () => {
             textAlign: "center",
             borderRadius: "8px",
             margin: "8px",
-            border: "none"
+            border: "none",
+            cursor:"pointer"
           }}>
             <Link to="/signup" style={{ textDecoration: "none", color: "white" }}>
               Signup
@@ -79,10 +81,28 @@ const Navbar = () => {
         </div>
       ) : (
         <div>
-          <Link to="/profile">
-            <button>Profile</button>
+          <Link to="/profile" style={{ textDecoration: "none" }}>
+            <button style={{
+              background: "none",
+              padding: "8px",
+              textAlign: "center",
+              borderRadius: "8px",
+              margin: "8px",
+              border: "none",
+              color: "white",
+              cursor:"pointer"
+            }}>Profile</button>
           </Link>
-          <button onClick={handleLogout}>Logout</button>
+          <button onClick={handleLogout} style={{
+              background: "none",
+              padding: "8px",
+              textAlign: "center",
+              borderRadius: "8px",
+              margin: "8px",
+              border: "none",
+              color: "white",
+              cursor:"pointer"
+            }}>Logout</button>
         </div>
       )}
     </div>
