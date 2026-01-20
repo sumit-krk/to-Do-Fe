@@ -24,6 +24,7 @@ const Profile=()=>{
     return(
         <div>Profile
             <h2>{profileData.firstName}</h2>
+            <h2>{profileData.lastName}</h2>
             <img src={profileData.photoUrl} />
         </div>
     )
