@@ -13,7 +13,14 @@ const Todo = () => {
   }, [token]);
 
   return (
-    <div style={{ textAlign: "center", marginTop: "20px" }}>
+    <div
+      style={{
+        textAlign: "center",
+        padding: "20px",
+        background: "linear-gradient(135deg, #667eea, #764ba2)",
+        minHeight: "100vh",
+      }}
+    >
       <h2>To do App</h2>
       <div
         style={{
@@ -35,7 +42,22 @@ const Todo = () => {
             placeholder="Write here"
             value={""}
           />
-          <button onSubmit={() => {}} type="submit">
+          <button
+            onSubmit={() => {}}
+            type="submit"
+            style={{
+              marginTop: "25px",
+              width: "100%",
+              padding: "12px",
+              border: "none",
+              borderRadius: "8px",
+              background: "#667eea",
+              color: "white",
+              fontSize: "15px",
+              cursor: "pointer",
+              transition: "0.3s",
+            }} hover={{background: "#5563d6"}}
+          >
             Add
           </button>
         </form>
