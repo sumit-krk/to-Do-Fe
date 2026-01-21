@@ -1,0 +1,82 @@
+.profile-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+.profile-card {
+  background: #fff;
+  width: 360px;
+  padding: 30px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.avatar {
+  width: 90px;
+  height: 90px;
+  background: #667eea;
+  color: #fff;
+  font-size: 36px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin: 0 auto 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  margin: 0;
+  font-size: 22px;
+  color: #333;
+}
+
+.email {
+  color: #777;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.divider {
+  height: 1px;
+  background: #eee;
+  margin: 20px 0;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+}
+
+.info span {
+  font-size: 12px;
+  color: #999;
+}
+
+.info p {
+  margin: 5px 0 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.edit-btn {
+  margin-top: 25px;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background: #667eea;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background: #5563d6;
+}
