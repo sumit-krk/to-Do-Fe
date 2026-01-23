@@ -56,7 +56,8 @@ const Todo = () => {
               fontSize: "15px",
               cursor: "pointer",
               transition: "0.3s",
-            }} hover={{background: "#5563d6"}}
+            }}
+            hover={{ background: "#5563d6" }}
           >
             Add
           </button>
