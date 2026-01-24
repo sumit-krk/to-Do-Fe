@@ -23,7 +23,7 @@ const Signup = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log(formData);
-    dispatch(signupUser(formData))
+    dispatch(signupUser(formData));
   };
 
   return (
