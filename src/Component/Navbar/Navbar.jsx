@@ -23,7 +23,7 @@ const Navbar = () => {
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
-        padding: "10px",
+        padding: "16px",
         height: "8vh",
         backgroundColor: "navy",
         color: "white",
@@ -34,7 +34,7 @@ const Navbar = () => {
       }}
     >
       <div>
-        <Link to="/todo" style={{ textDecoration: "none", color: "white",cursor:"pointer" }}>
+        <Link to="/todo" style={{ textDecoration: "none", color: "white",cursor:"pointer", margin:"12px" }}>
           To-Do
         </Link>
       </div>
@@ -43,7 +43,6 @@ const Navbar = () => {
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
-
         }}
       >
       </div>
